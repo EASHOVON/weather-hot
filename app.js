@@ -15,10 +15,10 @@ submitButton.addEventListener('click', function ()
             const temp = tem - 273.15;
             const description = data.weather[0].description;
 
+            document.getElementById('image').src = `icon/${ data.weather[0].icon }.png`;
             document.getElementById('city').innerText = cityName;
             document.getElementById('tem').innerText = temp.toFixed(2);
             document.getElementById('des').innerText = description;
-            document.getElementById('image').src = `icon/${ data.weather[0].icon }.png`;
         })
         .catch(res => alert('Please Type Right City Name'))
 })
